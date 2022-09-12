@@ -176,7 +176,9 @@ int main()
 		stacktype<string> obj(sizeArr);
 		obj.stackOperation(obj);
 	} else{
-		cout<<endl<<"!! INVALID CHOICE : INTEGER STACK IS CHOOSEN BY DEFAULT"<<endl<<endl;
+		cout<<endl<<"!! INVALID CHOICE : INTEGER STACK HAS BEEN CHOOSEN BY DEFAULT"<<endl<<endl;
+		stacktype<int> obj(sizeArr);
+		obj.stackOperation(obj);
 	}
 
     return 0;
