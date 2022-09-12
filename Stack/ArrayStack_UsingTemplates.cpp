@@ -1,7 +1,10 @@
+//IMPLEMENTING STACK USING TEMPLATES
+
 #include<iostream>
 #include<iomanip>
 using namespace std;
 
+//template <class t> denotes the blueprint of the template where t is any datatype such as int, float, string
 template <class t>class stacktype
 {
     int top;
@@ -34,7 +37,7 @@ template <class t> void stacktype<t>::push(int num)
         cin>>ele;
         arr[++top]=ele;
     }
-    }
+    }else   cout<<endl<<"!!INVALID NUMBER OF ELEMENTS : Element count needs to be lesser than or equal to the stack size !!"<<endl<<endl;
     return;
 }
 
@@ -63,9 +66,9 @@ template <class t> int stacktype<t> ::isFull()
 template <class t> void stacktype<t>::display()
 {
     cout<<"-> DISPLAYING THE ARRAY : "<<endl<<endl;
-    for (int i=0; i<top; i++)
+    for (int i=0; i<size; i++)
     {
-        cout<<setw(3)<<arr[i];
+        cout<<setw(5)<<arr[i];
     }
     return;
 }
@@ -143,7 +146,7 @@ void operationList()
     cout<<"\t 2. POP the element from stack"<<endl;
     cout<<"\t 3. DISPLAY the elements of stack"<<endl;
     cout<<"\t 4. Check if stack is empty"<<endl;
-    cout<<"\t ss5. Check if stack is full"<<endl;
+    cout<<"\t 5. Check if stack is full"<<endl;
     cout<<setw(40)<<"======================="<<endl<<endl;
     return;
 }
@@ -152,7 +155,7 @@ int main()
     cout<<setw(50)<<endl<<"** STACK IMPLEMENTATION USING ARRAY **"<<endl<<endl;
 
     int choice,ele, num,res,sizeArr;
-    cout<<"\n-> Enter the size of the array : ";
+    cout<<"\n-> Enter the size of the stack : ";
 	cin>>sizeArr;
 
 	stacktype<int> s1(sizeArr);
