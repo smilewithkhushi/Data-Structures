@@ -72,7 +72,7 @@ void linkedtype::addAtEnd(node *ptr)
     }
     else
     {
-        for (temp=start; temp!=NULL; temp->next=temp)
+        for (temp=start; temp!=NULL; temp=temp->next)
         {
             if (temp->next==NULL)
             {
