@@ -72,9 +72,9 @@ void linkedtype::addAtEnd(node *ptr)
     }
     else
     {
-        for (temp=start; temp!=NULL; temp=temp->next)
+        for (temp=start; temp!=NULL; temp->next=temp)
         {
-            if (temp==NULL)
+            if (temp->next==NULL)
             {
                 ptr->next=temp->next;
                 temp->next=ptr;
@@ -89,7 +89,7 @@ void linkedtype::addBefore(node* ptr)
     cout<<"-> Enter the value of node before which you want to add the element : ";
     cin>>before;
     node* temp;
-    temp=start->next;
+    temp=start;
     if (temp->info==before)
     {
         ptr->next=start;
@@ -97,7 +97,7 @@ void linkedtype::addBefore(node* ptr)
     }
     else
     {
-        for (temp=start; temp!=NULL; temp=temp->next)
+        for (temp=start; temp->next!=NULL; temp=temp->next)
         {
             if (temp->next->info=before)
             {
