@@ -1,5 +1,4 @@
 #include <iostream>
-
 using namespace std;
 
 const int size=5;
